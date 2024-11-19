@@ -1,0 +1,193 @@
+/* styles.css */
+body {
+	font-family: Arial, Helvetica, sans-serif; 
+	background: tomato;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
+
+.texto p {
+    width: 0;
+    margin: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2rem;
+    font-family: "Courier New";
+    border-right: 0.15em solid #000000;
+    animation: typing 5s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 88%;
+    }
+}
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Estilo para el corazón */
+.emoji-heart {
+    position: fixed;
+    font-size: 20px; /* Tamaño del emoji */
+    animation: float-emoji 1s ease-out forwards;
+    pointer-events: none; /* Permite interactuar con elementos detrás */
+}
+
+/* Animación para el emoji */
+@keyframes float-emoji {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) translateY(-50px); /* Flota hacia arriba */
+        opacity: 0;
+    }
+}
+
+
+
+.header {
+    text-align: center;
+    background-color: #000000;
+    padding: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.header h2 {
+    margin: 5px 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.intro {
+    text-align: center;
+    margin: 20px;
+    font-size: 1.2rem;
+}
+
+.carrusel-container {
+    position: relative;
+    width: 90%; /* Ajustar al 90% del ancho del contenedor */
+    max-width: 600px; /* Limitar el tamaño máximo del carrusel */
+    margin: auto;
+    overflow: hidden; /* Oculta el contenido que excede el contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: tomato; /* Fondo suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombras para darle un toque limpio */
+}
+
+.carrusel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out; /* Suavidad al deslizar */
+}
+
+.carrusel-track img {
+    width: 100%; /* Ajusta al ancho del contenedor */
+    max-width: 200px; /* Tamaño máximo uniforme */
+    height: 250px; /* Altura fija para mantener proporción */
+    object-fit: cover; /* Recorta las imágenes de manera proporcionada */
+    margin: 10px; /* Espacio entre imágenes */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Agregar sombras a las imágenes */
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.carrusel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carrusel-btn.prev {
+    left: 10px; /* Botón izquierdo */
+}
+
+.carrusel-btn.next {
+    right: 10px; /* Botón derecho */
+}
+
+
+.prev, .next {
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.timeline {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline li {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 2px solid #000000;
+}
+
+.timeline .date {
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.timeline li:before {
+    content: "•";
+    position: absolute;
+    left: -5px;
+    top: 0;
+    font-size: 20px;
+    color: #000000;
+}
+
+
+.messages {
+    padding: 50px;
+    text-align: center;
+}
+
+.messages h3 {
+    font-size: 1.8rem;
+}
+
+.footer {
+    text-align: center;
+    background-color: #000000;
+    color: #fff;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
